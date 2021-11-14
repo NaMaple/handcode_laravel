@@ -13,13 +13,16 @@
     "require": {},
     "autoload": {
         "classmap": [
-            "Test/ClassMap",
-            "TestAutoload"
+            "TestAutoload/ClassMap/Demo",
+            "TestAutoload/ClassMap"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "Foo\\": "src",
-            "": "NoNameSpace/Psr4"
-        }
+            "PSR4\\": "TestAutoload/PSR4",
+            "": "TestAutoload/NoNameSpace"
+        },
+        "files": [
+            "TestAutoload/Files/file.php",
+            "TestAutoload/Files/file1.php"
+        ]
     }
 }

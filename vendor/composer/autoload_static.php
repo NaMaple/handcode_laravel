@@ -6,37 +6,31 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f
 {
+    public static $files = array (
+        '6b76f74fd3cf11fc00f3a39f7697d297' => __DIR__ . '/../..' . '/TestAutoload/Files/file.php',
+        '40b224107a8291d8e4ae6a18524b963d' => __DIR__ . '/../..' . '/TestAutoload/Files/file1.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
-        'F' => 
+        'P' => 
         array (
-            'Foo\\' => 4,
-        ),
-        'A' => 
-        array (
-            'App\\' => 4,
+            'PSR4\\' => 5,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Foo\\' => 
+        'PSR4\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/TestAutoload/PSR4',
         ),
     );
 
     public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/../..' . '/NoNameSpace/Psr4',
+        0 => __DIR__ . '/../..' . '/TestAutoload/NoNameSpace',
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'TestAutoload\\Test' => __DIR__ . '/../..' . '/TestAutoload/Test.php',
-        'TestAutoload\\Test1' => __DIR__ . '/../..' . '/TestAutoload/Test1.php',
-        'Test\\ClassMap\\Job' => __DIR__ . '/../..' . '/Test/ClassMap/Job.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
