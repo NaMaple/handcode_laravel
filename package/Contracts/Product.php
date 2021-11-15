@@ -1,5 +1,7 @@
 <?php
 
+namespace Contracts;
+
 interface Product
 {
     public function getName();

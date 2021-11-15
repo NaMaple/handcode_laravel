@@ -2,7 +2,7 @@
 
 namespace Product;
 
-class Shoes implements \Product
+class Shoes implements \Contracts\Product
 {
 
     public function getName()

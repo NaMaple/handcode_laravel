@@ -2,7 +2,7 @@
 
 namespace Shop;
 
-use Product;
+use Contracts\Product;
 
 class ShopClothes
 {
