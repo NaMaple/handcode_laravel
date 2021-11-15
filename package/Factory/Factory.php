@@ -2,6 +2,7 @@
 
 namespace Factory;
 
+use Closure;
 use Contracts\Factory;
 use ReflectionClass;
 
@@ -12,6 +13,7 @@ use ReflectionClass;
 class ProductFactory implements Factory
 {
     protected $instances = [];
+    protected $bindings = [];
 
     /**
      * 单例
@@ -21,10 +23,26 @@ class ProductFactory implements Factory
         $this->instances[$abstract] = $instance;
     }
 
+    /**
+     * 生成实例
+     * @param $class
+     * @return mixed|object
+     * @throws \ReflectionException
+     */
     public function make($class)
     {
         if(isset($this->instances[$class])) {
             return $this->instances[$class];
+        }
+
+        if(isset($this->bindings[$class])) {
+            $concrete = $this->bindings[$class];
+
+            // 如果是闭包，就直接执行闭包
+            if ($concrete instanceof Closure) {
+                // 变量函数
+                return $concrete();
+            }
         }
 
         // 直接 new 类名没有办法传参
@@ -57,9 +75,20 @@ class ProductFactory implements Factory
         return $reflector->newInstanceArgs($instance);
     }
 
-    // 这个方法外部用不到，直接定义受保护的
+    /**
+     * 延时加载
+     * $abstract 抽象名称
+     * $concrete 具体的闭包
+     *
+     */
+    public function bind($abstract, $concrete)
+    {
+        unset($this->instances[$abstract]);
+        $this->bindings[$abstract] = $concrete;
+    }
 
     /**
+     * 这个方法外部用不到，直接定义受保护的
      * 解析依赖 todo 这里没理解
      * @param $dependencies
      */

@@ -9,6 +9,10 @@ $factory = new Factory\ProductFactory();
 $factory->instance('shoes', $factory->make('Product\Shoes'));
 $factory->instance('clothes', $factory->make('Product\Clothes'));
 
+$factory->bind('shoes', function () use ($factory){
+    $factory->make('\Product\Shoes');
+});
+
 // new 太多了，引入工厂模式
 $shopClothes = new \Shop\ShopClothes();
 $shopShes = new \Shop\ShopShoes();
