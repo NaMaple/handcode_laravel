@@ -34,6 +34,7 @@ class ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f
         'Contracts\\Factory' => __DIR__ . '/../..' . '/package/Contracts/Factory.php',
         'Contracts\\Product' => __DIR__ . '/../..' . '/package/Contracts/Product.php',
         'Factory\\ProductFactory' => __DIR__ . '/../..' . '/package/Factory/Factory.php',
+        'Product\\Attribute' => __DIR__ . '/../..' . '/package/Product/Attribute.php',
         'Product\\Clothes' => __DIR__ . '/../..' . '/package/Product/Clothes.php',
         'Product\\Shoes' => __DIR__ . '/../..' . '/package/Product/Shoes.php',
         'Shop\\ShopClothes' => __DIR__ . '/../..' . '/package/Shop/ShopClothes.php',

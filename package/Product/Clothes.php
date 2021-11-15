@@ -6,6 +6,12 @@ use Contracts\Product;
 
 class Clothes implements Product
 {
+    protected $attribute;
+
+    public function __construct(Attribute $attribute)
+    {
+        $this->attribute = $attribute;
+    }
 
     public function getName()
     {
@@ -14,6 +20,6 @@ class Clothes implements Product
 
     public function getAttribute()
     {
-        return 'Clothes Attribute';
+        $this->attribute->get();
     }
 }
