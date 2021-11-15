@@ -31,13 +31,15 @@ class ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Product' => __DIR__ . '/../..' . '/package/Contracts/Product.php',
+        'Product\\Clothes' => __DIR__ . '/../..' . '/package/Product/Clothes.php',
+        'Product\\Shoes' => __DIR__ . '/../..' . '/package/Product/Shoes.php',
+        'Shop\\ShopClothes' => __DIR__ . '/../..' . '/package/Shop/ShopClothes.php',
+        'Shop\\ShopShoes' => __DIR__ . '/../..' . '/package/Shop/ShopShoes.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
-        // 复制一个闭包，绑定指定的$this对象和类作用域
-        // newThis 绑定指定的$this对象
-        // newScope 类作用域
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$prefixDirsPsr4;

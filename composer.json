@@ -14,7 +14,8 @@
     "autoload": {
         "classmap": [
             "TestAutoload/ClassMap/Demo",
-            "TestAutoload/ClassMap"
+            "TestAutoload/ClassMap",
+            "package"
         ],
         "psr-4": {
             "PSR4\\": "TestAutoload/PSR4",
