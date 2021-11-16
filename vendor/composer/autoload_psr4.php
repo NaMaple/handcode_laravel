@@ -6,6 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PSR4\\' => array($baseDir . '/TestAutoload/PSR4'),
-    '' => array($baseDir . '/TestAutoload/NoNameSpace'),
 );

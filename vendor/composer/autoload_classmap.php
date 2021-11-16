@@ -7,12 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'Contracts\\Factory' => $baseDir . '/package/Contracts/Factory.php',
-    'Contracts\\Product' => $baseDir . '/package/Contracts/Product.php',
-    'Factory\\ProductFactory' => $baseDir . '/package/Factory/Factory.php',
-    'Product\\Attribute' => $baseDir . '/package/Product/Attribute.php',
-    'Product\\Clothes' => $baseDir . '/package/Product/Clothes.php',
-    'Product\\Shoes' => $baseDir . '/package/Product/Shoes.php',
-    'Shop\\ShopClothes' => $baseDir . '/package/Shop/ShopClothes.php',
-    'Shop\\ShopShoes' => $baseDir . '/package/Shop/ShopShoes.php',
+    'Illuminate\\Container\\Container' => $baseDir . '/TimidHaunter/laravel/framework/src/Illuminate/Container/Container.php',
 );

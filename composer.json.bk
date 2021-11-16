@@ -1,0 +1,30 @@
+{
+    "name": "yintian/handcode_laravel",
+    "description": "handcode_laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nanketaishou",
+            "email": "yintx_129@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "TestAutoload/ClassMap/Demo",
+            "TestAutoload/ClassMap",
+            "package",
+            "vendor"
+        ],
+        "psr-4": {
+            "PSR4\\": "TestAutoload/PSR4",
+            "": "TestAutoload/NoNameSpace"
+        },
+        "files": [
+            "TestAutoload/Files/file.php",
+            "TestAutoload/Files/file1.php"
+        ]
+    }
+}

@@ -6,47 +6,14 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f
 {
-    public static $files = array (
-        '6b76f74fd3cf11fc00f3a39f7697d297' => __DIR__ . '/../..' . '/TestAutoload/Files/file.php',
-        '40b224107a8291d8e4ae6a18524b963d' => __DIR__ . '/../..' . '/TestAutoload/Files/file1.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PSR4\\' => 5,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'PSR4\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/TestAutoload/PSR4',
-        ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/../..' . '/TestAutoload/NoNameSpace',
-    );
-
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Contracts\\Factory' => __DIR__ . '/../..' . '/package/Contracts/Factory.php',
-        'Contracts\\Product' => __DIR__ . '/../..' . '/package/Contracts/Product.php',
-        'Factory\\ProductFactory' => __DIR__ . '/../..' . '/package/Factory/Factory.php',
-        'Product\\Attribute' => __DIR__ . '/../..' . '/package/Product/Attribute.php',
-        'Product\\Clothes' => __DIR__ . '/../..' . '/package/Product/Clothes.php',
-        'Product\\Shoes' => __DIR__ . '/../..' . '/package/Product/Shoes.php',
-        'Shop\\ShopClothes' => __DIR__ . '/../..' . '/package/Shop/ShopClothes.php',
-        'Shop\\ShopShoes' => __DIR__ . '/../..' . '/package/Shop/ShopShoes.php',
+        'Illuminate\\Container\\Container' => __DIR__ . '/../..' . '/TimidHaunter/laravel/framework/src/Illuminate/Container/Container.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit8c7ea4259ee803cc81251aeb0aba983f::$classMap;
 
         }, null, ClassLoader::class);
